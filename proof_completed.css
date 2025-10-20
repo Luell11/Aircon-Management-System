@@ -1,0 +1,114 @@
+/* ========== Global Styles ========== */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('dash.jpg'); /* same background as your dashboard */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* ========== Container ========== */
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 30px 40px;
+  max-width: 700px;
+  width: 100%;
+  backdrop-filter: blur(5px);
+}
+
+/* ========== Header ========== */
+header h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #4CAF50;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ========== Ticket Info Section ========== */
+.ticket-info {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 15px;
+  line-height: 1.7;
+}
+
+.ticket-info p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.ticket-info strong {
+  color: #000;
+}
+
+/* ========== Gray Background Box (backgroundshits div) ========== */
+.backgroundshits {
+  background: #e9ecef;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.backgroundshits img {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+/* ========== Buttons ========== */
+.btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  margin: 10px 5px 0 0;
+}
+
+.btn:hover {
+  background: #43a047;
+  transform: scale(1.05);
+}
+
+/* ========== Alignment Helpers ========== */
+.containeralignleft,
+.containeralignright,
+.buttonalign {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px 20px;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+}

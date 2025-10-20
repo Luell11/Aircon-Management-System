@@ -1,0 +1,253 @@
+/* Reset and base style */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url('admin dashboard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+
+
+.containeralign {
+  display: flex;
+  justify-content: space-around;
+}
+select, input {
+  padding:10px;
+  margin-top: 20px;
+  border-radius: 16px;
+}
+
+button {
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+}
+/* Overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.buttonalign {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+  max-width: 700px;        
+  margin: 60px auto;        
+  padding: 40px 50px;      
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(8px);
+  color: #eee;
+}
+
+img {
+  width: 100%;
+  max-width: 100px;
+  display: flex;
+  border: 2px solid black;
+}
+
+/* Header */
+header h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+/* Anchor styled as button */
+a.btn, button.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 0;
+  width: 140px;
+  background-color: #00acc1;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgb(0 172 193 / 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 15px;
+}
+a.btn:hover, button.btn:hover {
+  background-color: #008394;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgb(0 131 148 / 0.7);
+}
+
+/* Back button container */
+.back-btn {
+  display: block;
+  margin: 0 auto 30px auto;
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 30px;
+}
+
+/* Ticket info styling */
+.ticket-info p {
+  font-size: 20px;
+  color: #ccc;
+  margin: 8px 0;
+}
+
+.ticket-info strong {
+  color: #fff;
+}
+
+/* Process list styling */
+#process-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+#process-list li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+#process-list li.completed {
+  color: #00acc1;
+  font-weight: 700;
+}
+
+#process-list li.completed::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00acc1;
+  font-weight: 900;
+}
+
+
+section img {
+  display: block;
+  margin: 10px auto;         
+  width: 250px;               
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;       
+  border: 2px solid #ccc;     
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4); 
+}
+
+
+.assign-form {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.assign-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.containerofcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each label + input/select pair */
+.containeralignleft {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.containeralignright select,
+.containeralignright input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.containeralignright select option {
+  color: #000; /* ensures dropdown text is visible */
+}
+
+/* Buttons (Save / Cancel) */
+.assign-form button {
+  padding: 12px 30px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.assign-form button.save {
+  background-color: #00acc1;
+  color: white;
+}
+
+.assign-form button.save:hover {
+  background-color: #008394;
+}
+
+.assign-form button.cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.assign-form button.cancel:hover {
+  background-color: #d32f2f;
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+  .assign-form {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+
+/* Responsive container */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maria Lopez - Technician Details</title>
+  <link rel="stylesheet" href="detail.css" />
+  <style>
+    .detail-container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: rgba(255,255,255,0.07);
+      padding: 30px 40px;
+      border-radius: 12px;
+      color: #eee;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    }
+
+    .detail-container h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .detail-info {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .back-btn {
+      display: block;
+      margin: 30px auto 0;
+      background: #00bcd4;
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,188,212,0.6);
+      text-align: center;
+      width: fit-content;
+    }
+
+    .back-btn:hover {
+      background: #009eb1;
+      box-shadow: 0 8px 20px rgba(0,158,177,0.9);
+    }
+  </style>
+</head>
+<body>
+  <main class="detail-container">
+    <h2>Maria Lopez</h2>
+    <div class="detail-info">
+      <p><strong>Role:</strong> Technician</p>
+      <p><strong>Status:</strong> <span style="color: #f39c12;">Working</span></p>
+      <p><strong>Contact:</strong> marialopez@gmail.com</p>
+      <p><strong>Experience:</strong> 3 years in software troubleshooting and client support.</p>
+      <p><strong>Bio:</strong> Maria is a dedicated technician focused on resolving complex software issues efficiently.</p>
+    </div>
+    <button class="back-btn" onclick="history.back()">Back</button>
+  </main>
+</body>
+</html>

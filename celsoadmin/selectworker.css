@@ -1,0 +1,126 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url('admin dashboard.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+/* Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(8px);
+  color: #eee;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+
+.worker-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  color: #cfd8dc;
+}
+
+.worker-list th, .worker-list td {
+  padding: 15px 18px;
+  border-bottom: 2px solid #455a64;
+  text-align: left;
+}
+
+.worker-list th {
+  background: #1c2130;
+  font-weight: 700;
+  color: #b0bec5;
+}
+
+.worker-list tr:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.status-online {
+  color: #00e676;
+  font-weight: 700;
+}
+
+.status-working {
+  color: #ffab00;
+  font-weight: 700;
+}
+
+.status-offline {
+  color: #ff3d00;
+  font-weight: 700;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 2px solid #ffffff;
+}
+
+table td {
+  color: #ffffff;
+}
+
+table th {
+  color: #ffffff !important;
+}
+
+
+.recent table th,
+.technician table th {
+  color: #ffffff !important;
+}
+
+
+
+.btn {
+  background-color: #00acc1;
+  border: none;
+  padding: 10px 18px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgb(0 172 193 / 0.35);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background-color: #008394;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgb(0 131 148 / 0.6);
+}
+
+.btn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+

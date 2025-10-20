@@ -1,0 +1,226 @@
+body {
+  background-image: url('admin dashboard.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.container {
+  padding: 40px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(8px);
+  color: #eee;
+}
+
+.header h1 {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+h2 {
+  color: #fff;
+}
+
+.cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  flex: 1 1 220px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 35px;
+  align-items: center;
+  min-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.card .box h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #ffffff; /* bright cyan */
+  font-weight: 700;
+}
+
+.card .box h3 {
+  margin: 8px 0 0 0;
+  color: #ffffff;
+}
+
+.card .icon-case img {
+  filter: invert(88%) sepia(100%) saturate(440%) hue-rotate(173deg) brightness(104%) contrast(102%);
+  width: 40px;
+  height: 40px;
+}
+
+.content-2 {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.recent, .technician {
+  background: rgba(23, 29, 59, 0.8); /* darker semi-transparent */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.4);
+  padding: 30px 35px;
+  flex: 1 1 480px;
+  min-width: 300px;
+  color: #eceff1;
+  transition: background-color 0.3s ease;
+}
+
+.recent:hover, .technician:hover {
+  background: rgba(23, 29, 59, 0.95);
+}
+
+.recent .title, .technician .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.recent .title h2, .technician .title h2 {
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 0.5);
+}
+
+.btn, .btn2 {
+  background-color: #00acc1;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgb(0 172 193 / 0.35);
+}
+
+.btn:hover, .btn2:hover {
+  background-color: #0f6772;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgb(0 131 148 / 0.6);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #cfd8dc;
+}
+
+table th, table td {
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 2px solid #ffffff;
+}
+
+table td {
+  color: #ffffff;
+}
+
+
+table th {
+  background: #1c2130;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+table th {
+  color: #ffffff !important;
+}
+
+
+.recent table th,
+.technician table th {
+  color: #ffffff !important;
+}
+
+
+table tr:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.status-online {
+  color: #00e676;
+  font-weight: 700;
+}
+.status-working {
+  color: #ffab00;
+  font-weight: 700;
+}
+.status-offline {
+  color: #ff3d00;
+  font-weight: 700;
+}
+
+.bts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #b0bec5;
+}
+
+textarea {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  border: 1.5px solid #4fc3f7;
+  padding: 15px 18px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #e1f5fe;
+  transition: border-color 0.3s ease;
+}
+
+textarea::placeholder {
+  color: #81d4fa;
+}
+
+textarea:focus {
+  border-color: #00acc1;
+  outline: none;
+}

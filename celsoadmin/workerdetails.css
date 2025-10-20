@@ -1,0 +1,197 @@
+/* Reset and base style */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url('admin dashboard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+  position: relative;
+  margin: 0;
+}
+
+/* Overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 40px 80px; /* extra bottom padding for buttons */
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(8px);
+  color: #eee;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Profile Image Section - centered */
+.profile-image-section {
+  text-align: center;
+  background: rgba(0, 172, 193, 0.7);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgb(0 172 193 / 0.4);
+  width: 220px;
+  margin-bottom: 40px;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.profile-image-section h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.profile-image-section .role {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  color: #d0f0f7;
+}
+
+/* Details Section: bio and work details side by side */
+.details-section {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 860px;
+  margin-bottom: 60px;
+}
+
+/* Bio styling */
+.bio {
+  flex: 1;
+  background: rgba(0, 172, 193, 0.5);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgb(0 172 193 / 0.3);
+}
+
+.bio h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.bio p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Work Details styling */
+.work-details {
+  flex: 1;
+  background: rgba(0, 172, 193, 0.5);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgb(0 172 193 / 0.3);
+}
+
+.work-details .info-item {
+  margin-bottom: 15px;
+}
+
+.work-details h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.work-details p {
+  font-size: 16px;
+  color: #ddd;
+}
+
+/* Buttons container - centered at bottom */
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Buttons */
+.btn {
+  flex: 1 1 140px;
+  padding: 14px 0;
+  background-color: #00acc1;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgb(0 172 193 / 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #008394;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgb(0 131 148 / 0.7);
+}
+
+/* Header */
+header h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .container {
+    padding-bottom: 140px; /* more space for buttons */
+  }
+
+  .details-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bio, .work-details {
+    width: 100%;
+  }
+
+  .action-buttons {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+}

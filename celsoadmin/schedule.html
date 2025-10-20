@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Schedule</title>
+<link rel="stylesheet" href="schedule.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Schedule Work</h1>
+    </div>
+
+    <form id="scheduleForm" novalidate>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required />
+
+      <label for="technician">Technician:</label>
+      <select id="technician" name="technician" required>
+        <option value="" disabled selected>Select Technician</option>
+        <option value="Ekel Pogi">Ekel Pogi</option>
+        <option value="Maria Lopez">Maria Lopez</option>
+        <option value="James Carter">James Carter</option>
+        <option value="Anne Perry">Anne Perry</option>
+        <option value="Tom Sanchez">Tom Sanchez</option>
+      </select>
+
+      <label for="notes">Additional Notes:</label>
+      <textarea id="notes" name="notes" placeholder="Write notes here..."></textarea>
+
+      <button type="submit" class="btn">Schedule</button>
+    </form>
+  </div>
+
+  <div class="back-button" style="margin-top:20px; text-align:center;">
+    <a href="inprogresswork.html">
+      <button class="btn" type="button">In Progress Work</button>
+    </a>
+    <a href="admindashboard.html">
+      <button class="btn" type="button">Back to Admin Dashboard</button>
+    </a>
+  </div>
+
+<script>
+  const form = document.getElementById('scheduleForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if(form.checkValidity()) {
+      // You can add additional processing here before redirect
+      alert('Work scheduled successfully!');
+      window.location.href = 'admindashboard.html'; // Redirect after scheduling
+    } else {
+      form.reportValidity();
+    }
+  });
+</script>
+
+</body>
+</html>

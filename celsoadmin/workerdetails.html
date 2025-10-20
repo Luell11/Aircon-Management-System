@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Worker Details</title>
+  <link rel="stylesheet" href="workerdetails.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Worker Details</h1>
+  </header>
+
+  <main class="container">
+    <!-- Profile Image centered at top -->
+    <div class="profile-image-section">
+      <img
+        src="https://placehold.co/200x200"
+        alt="Professional headshot of a technician"
+        class="profile-image"
+        onerror="this.style.display='none'"
+      />
+      <h2 id="worker-name">Ekel Pogi</h2>
+      <p class="role">Technician</p>
+    </div>
+
+    <!-- Bio and Work Details side by side -->
+    <div class="details-section">
+      <div class="bio">
+        <h3>Bio</h3>
+        <p>
+          This technician has extensive experience in maintaining and repairing industrial equipment.
+          Passionate about problem-solving and ensuring operational efficiency, they bring a hands-on
+          approach to every task and prioritize safety and quality in their work.
+        </p>
+      </div>
+
+      <div class="work-details">
+        <div class="info-item">
+          <h3>Role</h3>
+          <p>Technician</p>
+        </div>
+        <div class="info-item">
+          <h3>Status</h3>
+          <p>Available</p>
+        </div>
+        <div class="info-item">
+          <h3>Experience</h3>
+          <p>5+ years</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons centered at bottom -->
+    <div class="action-buttons">
+      
+      <a href="selectworker.html" class="btn btn-gray">Back to Worker List</a>
+    </div>
+  </main>
+
+  <script>
+    // Get worker name from URL query parameter
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name') || 'Ekel Pogi';
+    document.getElementById('worker-name').textContent = name;
+  </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2 {
+    color: #444;
+}
+
+.sidebar {
+    position: fixed;
+    background: grey;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .menu {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.sidebar li {
+    font-size: 24px;
+    padding: 10px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li:hover {
+    background: white;
+    color: red;
+}
+
+.sidebar .menu img{
+    size:2px;
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    background: #f1f1f1;
+
+}
+
+.container .header {
+    background: white;
+    border: 1px solid grey;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .header h1 {
+    font-size: 64px;
+}
+
+.container .content {
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+    background: #f1f1f1;
+}
+
+.container .content .cards {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .content .cards .card {
+    width: 250px;
+    height: 150px;
+    background: white;
+    margin: 20px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container .content .content-2 {
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+    
+}
+
+.technician textarea {
+  width: 100%;
+  height: 100px; /* height of box */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 20px;
+  resize: vertical; /* user can resize if they want */
+  transition: border 0.3s;
+}
+
+.technician textarea:focus {
+  border: 1px solid #007bff;
+}
+
+.btn {
+    background: #f05462;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+table {
+    padding: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.container .content .content-2 .technician .table .td:nth-child(1) {
+    height: 40px;
+    width: 40px;
+
+}
+
+.status-available {
+    color: green;
+    font-weight: bold;
+}
+
+.status-working {
+    color: #DAA520; 
+    font-weight: bold;
+}
+
+.status-off-duty {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.container .content .content-2 .technician {
+    flex: 2;
+    background: white;
+    min-height: 50vh;
+    margin: 0 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content .content-2 .recent {
+    min-height: 50vh;
+    flex: 5;
+    background: white;
+    margin: 0 25px 25px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content .content-2 .technician {
+    flex: 2;
+    background: white;
+    min-height: 50vh;
+    margin: 0 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.containenr .content .content-2 .recent .inlinebox {
+    display: inline-block;
+    gap:20px;
+}
+
+
+.btn2 {
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(14px, 2.5vw, 18px); 
+    font-weight: bold;
+    background: rgb(5, 0, 17);
+    width: auto; 
+    min-width: 120px; 
+    max-width: 200px; 
+    padding: 12px 16px; 
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.2s ease;
+    border: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .btn2 {
+        font-size: 14px;
+        padding: 10px 12px;
+        min-width: 100px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .sidebar li {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .sidebar li span {
+        display: none;
+    }
+    .sidebar {
+        align-items: center;
+    }
+    .sidebar li img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 536px) {
+    .menu h1{
+        font-size: 16px;
+    }
+    .container .header {
+        display: none;
+    }
+}

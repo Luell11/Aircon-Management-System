@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>All Service Tickets</title>
+<link rel="stylesheet" href="detail.css" />
+<style>
+  /* Additional styles for ticket list */
+  .container {
+    max-width: 700px;
+  }
+  .ticket-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .ticket-list li {
+    background: rgba(255, 255, 255, 0.12);
+    margin-bottom: 16px;
+    border-radius: 16px;
+    padding: 20px 25px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .ticket-list li:hover {
+    background: rgba(0, 172, 193, 0.3);
+    transform: translateY(-4px);
+  }
+  .ticket-link {
+    color: #eee;
+    text-decoration: none;
+    display: block;
+  }
+  .ticket-link h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.4rem;
+  }
+  .ticket-link p {
+    margin: 4px 0;
+    color: #ccc;
+    font-size: 0.95rem;
+  }
+  .status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+  }
+  .status-open {
+    background-color: #e67e22;
+  }
+  .status-closed {
+    background-color: #27ae60;
+  }
+  .status-pending {
+    background-color: #f39c12;
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="All Service Tickets">
+    <header>
+      <h1>All Service Tickets</h1>
+    </header>
+
+    <ul class="ticket-list">
+      <li>
+        <a href="ticket-12345.html" class="ticket-link" aria-label="View details for Ticket #1">
+          <h2>Ticket #1 - Leaking Faucet</h2>
+          <p><strong>Resident:</strong> John Doe</p>
+          <p><strong>Apartment Unit:</strong> Unit 101</p>
+          <p><strong>Reported:</strong> Sep 01, 2025 10:14 AM</p>
+          <span class="status-badge status-open">Open</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="ticket-12346.html" class="ticket-link" aria-label="View details for Ticket #12346">
+          <h2>Ticket #12346 - Not Cooling Condition</h2>
+          <p><strong>Resident:</strong> Jane Smith</p>
+          <p><strong>Apartment Unit:</strong> Unit 205</p>
+          <p><strong>Reported:</strong> Sep 01, 2025 11:22 AM</p>
+          <span class="status-badge status-open">Open</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="ticket-12347.html" class="ticket-link" aria-label="View details for Ticket #12347">
+          <h2>Ticket #12347 - Clogged Drain</h2>
+          <p><strong>Resident:</strong> Michael Brown</p>
+          <p><strong>Apartment Unit:</strong> Unit 205</p>
+          <p><strong>Reported:</strong> Sep 01, 2025 02:45 PM</p>
+          <span class="status-badge status-open">Open</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="ticket-12348.html" class="ticket-link" aria-label="View details for Ticket #12348">
+          <h2>Ticket #12348 - Issue Not Specified</h2>
+          <p><strong>Resident:</strong> Emily Johnson</p>
+          <p><strong>Apartment Unit:</strong> Unit 408</p>
+          <p><strong>Reported:</strong> Sep 02, 2025 08:05 AM</p>
+          <span class="status-badge status-open">Open</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="back-btn">
+      <a href="admindashboard.html" class="btn" aria-label="Back to Dashboard">Back</a>
+    </div>
+  </div>
+</body>
+</html>

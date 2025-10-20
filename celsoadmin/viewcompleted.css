@@ -1,0 +1,130 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('admin dashboard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+  margin: 40px;
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  background: rgba(18, 24, 38, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.header h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #00c0ff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ticket-card {
+  background: #121826;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.ticket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,192,255,0.6);
+}
+
+.ticket-card h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-bottom: 12px;
+  color: #00a3ff;
+}
+
+.ticket-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.ticket-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.client-info, .technician-info {
+  flex: 1;
+  background: #1e2540;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(0,192,255,0.2);
+}
+
+.client-info h3, .technician-info h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #00c0ff;
+}
+
+.ticket-summary h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #00c0ff;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #00c0ff, #00a3ff);
+  color: #7d5d5d;
+  font-weight: 700;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 192, 255, 0.4);
+}
+
+.btn:hover,
+.btn:focus {
+  background: linear-gradient(90deg, #00a3ff, #0088cc);
+  color: #fff;
+  outline: none;
+  box-shadow: 0 6px 14px rgba(0, 140, 204, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .ticket-details {
+    flex-direction: column;
+  }
+}

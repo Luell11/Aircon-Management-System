@@ -1,0 +1,121 @@
+/* Body and background */
+body {
+  background-image: url('admin dashboard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+  margin: 40px;
+  position: relative;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background: rgba(18, 24, 38, 0.85); /* semi-transparent dark background */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Header */
+.header h1 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.8em;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Ticket info headings */
+.ticket-info h2, .ticket-info h3 {
+  color: #cfcfd1;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 12px;
+}
+
+.ticket-info p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #121826;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead th {
+  font-weight: 700;
+  font-size: 1.15em;
+  color: #cfcfd1;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 14px 18px;
+  text-align: center;
+  border-bottom: 2px solid #4e5675;
+  background: #1e2540;
+}
+
+tbody td {
+  padding: 14px 18px;
+  text-align: center;
+  border-bottom: 1px solid #4e5675;
+  white-space: pre-line;
+  vertical-align: top;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #eee;
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover td {
+  background-color: rgba(0, 192, 255, 0.15);
+}
+
+/* Column widths */
+tbody td:nth-child(1) { width: 15%; }
+tbody td:nth-child(2) { width: 25%; }
+tbody td:nth-child(3) { width: 20%; }
+tbody td:nth-child(4) { width: 20%; }
+tbody td:nth-child(5) { width: 20%; }
+
+/* Status cell styling */
+.status.in-progress {
+  color: #03ae25;
+  font-weight: 700;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Button styling */
+a.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #00c0ff, #00a3ff);
+  color: #7d5d5d;
+  font-weight: 700;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 192, 255, 0.4);
+}
+
+a.btn:hover,
+a.btn:focus {
+  background: linear-gradient(90deg, #00a3ff, #0088cc);
+  color: #fff;
+  outline: none;
+  box-shadow: 0 6px 14px rgba(0, 140, 204, 0.7);
+}
